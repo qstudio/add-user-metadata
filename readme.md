@@ -59,7 +59,7 @@ Click on the 'Add User Metadata' link in the 'Users' menu, enter the meta_key an
 ## Screenshots ##
 
 ###1. Add Metadata screen###
-[missing image]
+![ScreenShot](http://s.w.org/plugins/add-user-metadata/screenshot-1.png?r=859692)
 
 ## Changelog ##
 
