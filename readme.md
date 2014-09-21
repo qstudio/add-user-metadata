@@ -2,8 +2,8 @@
 **Contributors:** qlstudio  
 **Tags:** user, users, import, usermeta,  user_meta, bulk, manage, CSV  
 **Requires at least:** 3.5  
-**Tested up to:** 3.8.1  
-**Stable tag:** 0.3  
+**Tested up to:** 4.0.0
+**Stable tag:** 0.3.1  
 **License:** GPLv2  
 
 Bulk import user meta data from a text list ( csv ) - checking for missing users & existing usermeta data to avoid duplicates.
@@ -62,6 +62,9 @@ Click on the 'Add User Metadata' link in the 'Users' menu, enter the meta_key an
 ![ScreenShot](http://s.w.org/plugins/add-user-metadata/screenshot-1.png?r=859692)
 
 ## Changelog ##
+
+### 0.3.1 ###
+* WP 4.0 testing
 
 ### 0.3 ###
 * moved plugin instatiation to WP init hook
