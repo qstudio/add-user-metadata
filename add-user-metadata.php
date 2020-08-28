@@ -4,7 +4,7 @@
 Plugin Name: Import User Meta Data from CSV
 Plugin URI: http://qstudio.us/plugins/
 Description: Bulk add user Metadata from a text list ( csv ) - checking for existing usermeta data to avoid duplicate entries.
-Version: 0.3.2
+Version: 0.5.5
 Author: Q Studio
 Author URI: http://qstudio.us/
 License: GPL2
@@ -52,11 +52,11 @@ if ( ! class_exists( "Q_Add_User_Metadata" ) ) {
         
         
         /**
-	 * Class contructor
-	 *
-	 * @since   0.1
-	 **/
-	public function __construct() 
+		 * Class contructor
+		 *
+		 * @since   0.1
+		 **/
+		public function __construct() 
         {
             
             // activation ##
@@ -144,7 +144,13 @@ if ( ! class_exists( "Q_Add_User_Metadata" ) ) {
         public function admin_menu() 
         {
             
-            add_users_page( __( 'Add Metadata', 'q-add-user-metadata' ), __( 'Add Metadata', 'q-add-user-metadata' ), 'list_users', 'add-user-metadata', array( $this, 'admin_page' ) );
+            add_users_page( 
+				__( 'Add Metadata', 'q-add-user-metadata' ), 
+				__( 'Add Metadata', 'q-add-user-metadata' ), 
+				'list_users', 
+				'add-user-metadata', 
+				array( $this, 'admin_page' ) 
+			);
             
         }
         
@@ -160,7 +166,9 @@ if ( ! class_exists( "Q_Add_User_Metadata" ) ) {
             // check the capabilities of the user ##
             // http://codex.wordpress.org/Roles_and_Capabilities#edit_users ##
             if ( !current_user_can( 'list_users' ) )  {
-		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+
+				wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+
             }
             
             // page title ##
@@ -172,11 +180,14 @@ if ( ! class_exists( "Q_Add_User_Metadata" ) ) {
         
                 // nothing happening? ##
                 if ( isset( $_GET['error'] ) ) {
+
                     echo '<div class="updated"><p><strong>' . __( 'Opps! Something went wrong...', 'q-add-user-metadata' ) . '</strong></p></div>';
+
                 }
 
                 // debug metadata processing ##
                 $q_add_user_metadata_option = get_option( 'q-add-user-metadata', false );
+
                 if ( $q_add_user_metadata_option && isset( $q_add_user_metadata_option['debug'] ) ) {
                     
                     echo "<h4 class='can_hide'>".__('Debug Info:','q-add-user-metadata')."</h4>";
@@ -222,7 +233,7 @@ if ( ! class_exists( "Q_Add_User_Metadata" ) ) {
                                 <span class="description"><?php 
                                     printf( 
                                         'The name of the Usermeta Key to add. - <a href="%s" target="_blank">%s</a>.', 
-                                        esc_url( "http://codex.wordpress.org/Function_Reference/add_user_meta" ), 
+                                        esc_url( "https://developer.wordpress.org/reference/functions/add_user_meta/" ), 
                                         esc_html( __("add_user_meta()", "q_support" ) ) 
                                     ); 
                                 ?></span>
@@ -513,7 +524,7 @@ if ( ! class_exists( "Q_Add_User_Metadata" ) ) {
         
         
         /* 
-         * Convert CSV strong to array 
+         * Convert CSV string to array 
          * 
          * @since   0.1
          */
@@ -571,6 +582,8 @@ if ( ! class_exists( "Q_Add_User_Metadata" ) ) {
             
             // load the scripts on only the plugin admin page 
             if (isset( $_GET['page'] ) && ( $_GET['page'] == 'add-user-metadata' ) ) {
+
+				add_thickbox();
             
 ?>
         <script>

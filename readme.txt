@@ -3,7 +3,7 @@ Contributors: qlstudio
 Tags: user, users, import, usermeta,  user_meta, bulk, manage, CSV
 Requires at least: 3.5
 Tested up to: 5.5.0
-Stable tag: 0.5.0
+Stable tag: 0.5.5
 License: GPLv2
 
 Bulk import user meta data from a text list ( csv ) - checking for missing users & existing usermeta data to avoid duplicates.
@@ -27,8 +27,6 @@ Please do not use the Wordpress.org forum to report bugs, as we no longer monito
 * Fully internationalized
 * Safe and WordPress Friendly
 * Nerdy debug screens!
-
-For feature request and bug reports, [please use the forums](http://wordpress.org/tags/add-user-metadata).
 
 == Installation ==
 
@@ -61,6 +59,10 @@ Click on the 'Add User Metadata' link in the 'Users' menu, enter the meta_key an
 1. Add Metadata screen
 
 == Changelog ==
+
+= 0.5.5 =
+* Fix to WP Thickbox asset
+* WP 5.5.0 testing
 
 = 0.3.2 =
 * WP 4.4.1 testing
