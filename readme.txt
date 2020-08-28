@@ -1,7 +1,7 @@
 === Import User Meta Data from CSV ===
 Contributors: qlstudio
 Tags: user, users, import, usermeta,  user_meta, bulk, manage, CSV
-Requires at least: 3.5
+Requires at least: 4.0.0
 Tested up to: 5.5.0
 Stable tag: 0.5.5
 License: GPLv2
