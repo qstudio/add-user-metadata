@@ -1,6 +1,6 @@
 {
 	"name": "add-user-metadata",
-	"version": "0.5.11",
+	"version": "0.5.12",
 	"description": "Q Plugins ~ Import User Meta Data from CSV",
 	"author": "Q Studio",
 	"homepage": "https://qstudio.us",
@@ -9,5 +9,4 @@
 		"url": "qstudio/add-user-metadata"
 	},
 	"license": "GPL-3.0-or-later",
-	"build": ""
 }
