@@ -4,7 +4,7 @@
 Plugin Name: Import User Meta Data from CSV
 Plugin URI: http://qstudio.us/plugins/
 Description: Bulk add user Metadata from a text list ( csv ) - checking for existing usermeta data to avoid duplicate entries.
-Version: 0.5.12
+Version: 0.5.2
 Author: Q Studio
 Author URI: http://qstudio.us/
 License: GPL2
@@ -26,7 +26,7 @@ if ( ! class_exists( "Q_Add_User_Metadata" ) ) {
     }
     
     // define constants ##
-    define( 'Q_ADD_USER_METADATA_VERSION', '0.3.2' ); // version ##
+    define( 'Q_ADD_USER_METADATA_VERSION', '0.5.2' ); // version ##
     define( 'Q_ADD_USER_METADATA_DEBUG', false ); // debugging ##
 
     class Q_Add_User_Metadata {
